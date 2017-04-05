@@ -20,3 +20,5 @@ MAIL_PASSWORD = None
 
 # administrator list
 ADMINS = ['you@example.com']
+
+WHOOSH_ENABLED = os.environ.get('HEROKU') is None
