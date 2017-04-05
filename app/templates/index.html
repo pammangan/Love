@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <h1>Hello, hello {{ user.nickname }}!</h1>
+  <div>
+    <a href="{{ url_for('new_contact_info') }}">Add New Contact</a>
+  </div>
+
+  <h2>Find Contacts</h2>
+
+	<form name="contact_form" action="/contact_list" method="POST">
+		<p>First Name: <input type="text" name="first_name"></input></p>
+		<p>Last Name: <input type="text" name="last_name"></input></p>
+	    <p><input type= "submit" value="submit"></p>
+    </form>
+{% endblock %}

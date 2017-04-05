@@ -1,0 +1,355 @@
+2017-03-28 22:33:03,622 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-28 22:33:58,475 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-28 22:34:29,144 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 21:35:22,079 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 21:35:53,192 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 21:36:00,367 ERROR: Exception on /index [GET] [in /Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/pPamam/Love/app/views.py", line 16, in before_request
+    if g.user.is_authenticated:
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 317, in _load_user
+    return self.reload_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/pPamam/Love/app/views.py", line 11, in load_user
+    return User.query.get(int(id))
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in __get__
+    mapper = orm.class_mapper(type)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 1222, in _configure_all
+    configure_mappers()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 2866, in configure_mappers
+    mapper._post_configure_properties()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 1765, in _post_configure_properties
+    prop.init()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/interfaces.py", line 184, in init
+    self.do_init()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 1653, in do_init
+    self._setup_join_conditions()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 1728, in _setup_join_conditions
+    can_be_synced_fn=self._columns_are_mapped
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 1986, in __init__
+    self._determine_joins()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 2090, in _determine_joins
+    "specify a 'primaryjoin' expression." % self.prop)
+NoForeignKeysError: Could not determine join condition between parent/child tables on relationship Contact.notes - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
+2017-03-29 21:37:12,963 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 21:37:20,514 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 21:37:28,031 ERROR: Exception on /index [GET] [in /Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/pPamam/Love/app/views.py", line 39, in index
+    notes=notes)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/pPamam/Love/app/templates/base.html", line 27, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/pPamam/Love/app/templates/index.html", line 7, in block "content"
+    <a href="{{ url_for('contact_new') }}">Add New Contact</a>
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/helpers.py", line 323, in url_for
+    force_external=external)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/routing.py", line 1768, in build
+    raise BuildError(endpoint, values, method, self)
+BuildError: Could not build url for endpoint 'contact_new'. Did you mean 'new_contact_info' instead?
+2017-03-29 21:40:55,153 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 21:48:23,172 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 21:48:53,515 ERROR: Exception on /contact/new [POST] [in /Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/pPamam/Love/app/views.py", line 19, in before_request
+    if g.user.is_authenticated:
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 317, in _load_user
+    return self.reload_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/pPamam/Love/app/views.py", line 14, in load_user
+    return User.query.get(int(id))
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in __get__
+    mapper = orm.class_mapper(type)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 1222, in _configure_all
+    configure_mappers()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 2866, in configure_mappers
+    mapper._post_configure_properties()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 1765, in _post_configure_properties
+    prop.init()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/interfaces.py", line 184, in init
+    self.do_init()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 1653, in do_init
+    self._setup_join_conditions()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 1728, in _setup_join_conditions
+    can_be_synced_fn=self._columns_are_mapped
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 1986, in __init__
+    self._determine_joins()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 2090, in _determine_joins
+    "specify a 'primaryjoin' expression." % self.prop)
+NoForeignKeysError: Could not determine join condition between parent/child tables on relationship Contact.notes - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
+2017-03-29 21:50:55,811 ERROR: Exception on /contact/new [POST] [in /Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/pPamam/Love/app/views.py", line 19, in before_request
+    if g.user.is_authenticated:
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 317, in _load_user
+    return self.reload_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/pPamam/Love/app/views.py", line 14, in load_user
+    return User.query.get(int(id))
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in __get__
+    mapper = orm.class_mapper(type)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 1222, in _configure_all
+    configure_mappers()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 2863, in configure_mappers
+    raise e
+InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper|Contact|contact'. Original exception was: Could not determine join condition between parent/child tables on relationship Contact.notes - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
+2017-03-29 21:50:59,009 ERROR: Exception on /contact/new [GET] [in /Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/pPamam/Love/app/views.py", line 19, in before_request
+    if g.user.is_authenticated:
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 317, in _load_user
+    return self.reload_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/pPamam/Love/app/views.py", line 14, in load_user
+    return User.query.get(int(id))
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in __get__
+    mapper = orm.class_mapper(type)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 1222, in _configure_all
+    configure_mappers()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 2863, in configure_mappers
+    raise e
+InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper|Contact|contact'. Original exception was: Could not determine join condition between parent/child tables on relationship Contact.notes - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
+2017-03-29 21:51:06,822 ERROR: Exception on /contact/new [GET] [in /Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/pPamam/Love/app/views.py", line 19, in before_request
+    if g.user.is_authenticated:
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 317, in _load_user
+    return self.reload_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/pPamam/Love/app/views.py", line 14, in load_user
+    return User.query.get(int(id))
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in __get__
+    mapper = orm.class_mapper(type)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 1222, in _configure_all
+    configure_mappers()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 2863, in configure_mappers
+    raise e
+InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper|Contact|contact'. Original exception was: Could not determine join condition between parent/child tables on relationship Contact.notes - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
+2017-03-29 21:51:18,410 ERROR: Exception on /contact/new [GET] [in /Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/pPamam/Love/app/views.py", line 19, in before_request
+    if g.user.is_authenticated:
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 317, in _load_user
+    return self.reload_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/pPamam/Love/app/views.py", line 14, in load_user
+    return User.query.get(int(id))
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in __get__
+    mapper = orm.class_mapper(type)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 1222, in _configure_all
+    configure_mappers()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 2863, in configure_mappers
+    raise e
+InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper|Contact|contact'. Original exception was: Could not determine join condition between parent/child tables on relationship Contact.notes - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
+2017-03-29 21:51:21,540 ERROR: Exception on /index [GET] [in /Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/pPamam/Love/app/views.py", line 19, in before_request
+    if g.user.is_authenticated:
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 317, in _load_user
+    return self.reload_user()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/pPamam/Love/app/views.py", line 14, in load_user
+    return User.query.get(int(id))
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in __get__
+    mapper = orm.class_mapper(type)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 1222, in _configure_all
+    configure_mappers()
+  File "/Users/pPamam/Love/flask/lib/python2.7/site-packages/sqlalchemy/orm/mapper.py", line 2863, in configure_mappers
+    raise e
+InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper|Contact|contact'. Original exception was: Could not determine join condition between parent/child tables on relationship Contact.notes - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
+2017-03-29 21:53:29,815 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 21:53:39,093 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 22:03:52,241 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 22:03:58,736 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-29 22:03:59,007 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-30 14:53:07,189 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-30 15:03:47,468 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-30 15:07:15,826 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-30 15:07:16,188 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]
+2017-03-30 15:12:32,810 INFO: microblog startup [in /Users/pPamam/Love/app/__init__.py:34]

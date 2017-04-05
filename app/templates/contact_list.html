@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Contact List</h2>
+
+    <table padding='50px' align='center' margin-left='50px'>
+      {% for contact in contacts %}
+          
+          <tr>
+            {{ contact.first_name }} 
+          </tr>
+          <tr>
+            {{ contact.last_name }} 
+          </tr>
+          <tr>
+            <a href="/contact/{{ contact.id }}">  View Contact Record</a>
+          </tr>
+
+      {% endfor %}
+    </table>   
+
+
+
+
+
+{% endblock %}
