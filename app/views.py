@@ -9,21 +9,21 @@ from wtforms import StringField, BooleanField
 from wtforms.validators import DataRequired
 
 
-# @lm.user_loader
-# def load_user(id):
-#     return User.query.get(int(id))
+@lm.user_loader
+def load_user(id):
+    return User.query.get(int(id))
 
-# @app.before_request
-# def before_request():
-#     g.user = current_user
-#     if g.user.is_authenticated:
-#       g.user.last_seen = datetime.utcnow()
-#       db.session.add(g.user)
-#       db.session.commit()
+@app.before_request
+def before_request():
+    g.user = current_user
+    if g.user.is_authenticated:
+      g.user.last_seen = datetime.utcnow()
+      db.session.add(g.user)
+      db.session.commit()
 
-# @app.route('/')
 @app.route('/')
-# @login_required
+@app.route('/index')
+@login_required
 def index():
     user = g.user
     notes = [
