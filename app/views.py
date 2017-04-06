@@ -21,8 +21,8 @@ from wtforms.validators import DataRequired
 #       db.session.add(g.user)
 #       db.session.commit()
 
+# @app.route('/')
 @app.route('/')
-@app.route('/index')
 # @login_required
 def index():
     user = g.user
