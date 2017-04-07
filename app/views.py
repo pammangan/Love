@@ -22,6 +22,34 @@ def before_request():
       db.session.commit()
 
 @app.route('/')
+
+@app.route('/login', methods=['GET'])
+def login_form():
+
+    return render_template("login.html")
+
+
+@app.route('/login', methods=['POST'])
+def login_process():
+
+    user_login = request.form["username"]
+    user_password = request.form["password"]
+
+    user = User.query.filter_by(user_login=user_login).first()
+
+    if not user:
+        flash("User does not exist. Please try again")
+        return redirect("/login")
+
+    if user.user_password != user_password:
+        flash("Password is not correct. Please try again.")
+        return redirect("/login")
+
+    # session["user_id"] = user.user_id
+
+    flash("You are logged in!")
+    return redirect("/index")
+
 @app.route('/index')
 @login_required
 def index():
